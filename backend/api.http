@@ -1,0 +1,93 @@
+### SIGNUP API
+
+POST http://localhost:5000/api/user/signup
+Content-Type: application/json
+
+{
+    "username": "sreeman",
+    "name": "Sreeman",
+    "email": "sreeman@gmail.com",
+    "phone": "9876543210",
+    "password": "12345"
+}
+
+
+
+### LOGIN API
+
+POST http://localhost:5000/api/user/login
+Content-Type: application/json
+
+{
+    "email": "sreeman@gmail.com",
+    "password": "12345"
+}
+
+
+
+### GET USER API
+
+POST http://localhost:5000/api/user/getUser
+Content-Type: application/json
+Authorization: PASTE_TOKEN_HERE
+
+{}
+
+
+
+### CREATE DOCUMENT
+
+POST http://localhost:5000/api/doc/create
+Content-Type: application/json
+Authorization: PASTE_TOKEN_HERE
+
+{
+    "docName": "MERN Notes"
+}
+
+
+
+### UPLOAD DOCUMENT
+
+POST http://localhost:5000/api/doc/upload
+Content-Type: application/json
+Authorization: PASTE_TOKEN_HERE
+
+{
+    "docId": "PASTE_DOC_ID",
+    "content": "This is my document content"
+}
+
+
+
+### GET SINGLE DOCUMENT
+
+POST http://localhost:5000/api/doc/get
+Content-Type: application/json
+Authorization: PASTE_TOKEN_HERE
+
+{
+    "docId": "PASTE_DOC_ID"
+}
+
+
+
+### GET ALL DOCUMENTS
+
+POST http://localhost:5000/api/doc/all
+Content-Type: application/json
+Authorization: PASTE_TOKEN_HERE
+
+{}
+
+
+
+### DELETE DOCUMENT
+
+POST http://localhost:5000/api/doc/delete
+Content-Type: application/json
+Authorization: PASTE_TOKEN_HERE
+
+{
+    "docId": "PASTE_DOC_ID"
+}
