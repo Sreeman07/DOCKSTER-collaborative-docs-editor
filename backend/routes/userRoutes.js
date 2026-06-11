@@ -98,7 +98,10 @@ router.post("/login", async (req, res) => {
                 userId: user._id,
                 email: user.email
             },
-            secret
+            secret,
+            {
+                expiresIn: "1d"
+            }
         );
 
         res.json({
@@ -121,18 +124,20 @@ router.post("/login", async (req, res) => {
 
 // ================= GET USER =================
 
-router.post("/getUser",verifyToken,async (req, res) => {
+router.post("/getUser", verifyToken, async (req, res) => {
 
     try {
 
-        const { userId } = req.body;
+        const userId = req.user.userId;
 
-        const user = await userModel.findById(userId);
+        const user = await userModel
+            .findById(userId)
+            .select("-password");
 
         if (!user) {
             return res.json({
                 success: false,
-                message: "Invalid user"
+                message: "User not found"
             });
         }
 
@@ -148,6 +153,18 @@ router.post("/getUser",verifyToken,async (req, res) => {
             message: error.message
         });
     }
+});
+
+
+
+// ================= LOGOUT =================
+
+router.post("/logout", verifyToken, async (req, res) => {
+
+    res.json({
+        success: true,
+        message: "Logout successful"
+    });
 });
 
 
