@@ -9,7 +9,17 @@ const docRoutes = require("./routes/docRoutes");
 const app = express();
 
 // Middleware
-app.use(cors());
+const cors = require("cors");
+
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",
+      "https://dockster-collaborative-docs-editor.vercel.app",
+    ],
+    credentials: true,
+  })
+);
 
 app.use(express.json());
 
