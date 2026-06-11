@@ -98,7 +98,7 @@ const SignUp = () => {
               <p className='text-red-500 text-[14px] my-2'>{error}</p>
               <p>Already have an account <Link to="/login" className='text-blue-500'>Login</Link></p>
 
-              <button className='p-[10px] bg-green-500 transition-all hover:bg-green-600 text-white rounded-lg w-full border-0 mt-3'>Sing Up</button>
+              <button className='p-[10px] bg-green-500 transition-all hover:bg-green-600 text-white rounded-lg w-full border-0 mt-3'>Sign Up</button>
 
             </form>
           </div>
