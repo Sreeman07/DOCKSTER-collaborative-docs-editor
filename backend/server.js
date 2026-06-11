@@ -9,7 +9,6 @@ const docRoutes = require("./routes/docRoutes");
 const app = express();
 
 // Middleware
-const cors = require("cors");
 
 app.use(
   cors({
