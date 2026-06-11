@@ -4,7 +4,7 @@ import deleteImg from "../images/delete.png";
 import { MdDelete } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 
-const API_BASE_URL = "http://localhost:5000/api";
+const API_BASE_URL = "https://dockster-collaborative-docs-editor.onrender.com/api";
 
 const Docs = ({ docs }) => {
 

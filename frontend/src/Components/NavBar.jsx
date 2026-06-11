@@ -4,7 +4,7 @@ import { RiSearchLine } from "react-icons/ri";
 import Avatar from 'react-avatar';
 import { useNavigate } from 'react-router-dom';
 
-const API_BASE_URL = "http://localhost:5000/api/user";
+const API_BASE_URL = "https://dockster-collaborative-docs-editor.onrender.com/api/user";
 
 const Navbar = () => {
 
