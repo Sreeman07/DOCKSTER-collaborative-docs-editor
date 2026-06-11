@@ -67,7 +67,7 @@ const Login = () => {
               </div>
 
               <p className='text-red-500 text-[14px] my-2'>{error}</p>
-              <p>Don't have an account <Link to="/signUp" className='text-blue-500'>Sing Up</Link></p>
+              <p>Don't have an account <Link to="/signUp" className='text-blue-500'>Sign Up</Link></p>
 
               <button className='p-[10px] bg-green-500 transition-all hover:bg-green-600 text-white rounded-lg w-full border-0 mt-3'>Login</button>
 
