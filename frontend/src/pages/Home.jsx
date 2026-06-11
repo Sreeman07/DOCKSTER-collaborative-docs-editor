@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "../components/Navbar";
+import Navbar from "../Components/NavBar";
 import { BsPlusLg } from "react-icons/bs";
-import Docs from "../components/Docs";
+import Docs from "../Components/docs";
 import { MdOutlineTitle } from "react-icons/md";
 import { api_base_url } from "../Helper";
 import { useNavigate } from "react-router-dom";
